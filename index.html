@@ -65,7 +65,10 @@
           </nav>
           <!-- Menu toggle button -->
           <button
+            id="hamburger"
             type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
             class="md:hidden p-2 cursor-pointer hover:border hover:rounded-sm transition-border ease-linear duration-300"
           >
             <svg
@@ -87,6 +90,47 @@
           </button>
         </div>
       </header>
+
+      <!-- Mobile nav links  -->
+      <nav id="mobile-menu" class="md:hidden hidden border-b bg-white">
+        <div class="px-4 py-3 flex flex-col gap-1">
+          <a href="/" class="px-3 py-2 text-sm font-medium hover:underline"
+            >Home</a
+          >
+          <a
+            href="./routes/personal-info.html"
+            class="px-3 py-2 text-sm font-medium hover:underline"
+            >Info</a
+          >
+          <a
+            href="./routes/fees.html"
+            class="px-3 py-2 text-sm font-medium hover:underline"
+            >Fees</a
+          >
+          <a
+            href="./routes/timetable.html"
+            class="px-3 py-2 text-sm font-medium hover:underline"
+            >Timetable</a
+          >
+          <a
+            href="./routes/course-registration.html"
+            class="px-3 py-2 text-sm font-medium hover:underline"
+            >Course Registration</a
+          >
+          <a
+            href="./routes/results.html"
+            class="px-3 py-2 text-sm font-medium hover:underline"
+            >Results</a
+          >
+          <a
+            href="./routes/my-requests.html"
+            class="px-3 py-2 text-sm font-medium hover:underline"
+            >My Requests</a
+          >
+        </div>
+      </nav>
+      <!-- Mobile Nav links end -->
+
       <!-- Main content -->
       <main class="container mx-auto px-4 py-12">
         <div id="home" class="max-w-4xl">
@@ -155,6 +199,17 @@
 
     <script>
       const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener("click", () => {
+          const isHidden = mobileMenu.classList.toggle("hidden");
+
+          // accessibility state update.
+          hamburger.setAttribute("aria-exanded", (!isHidden).toString());
+        });
+      }
+
       const sidebar = document.getElementById("sidebar");
       const navbarItems = document.querySelectorAll("#navbar li");
       const sidebarItems = document.querySelectorAll("#sidebar li");
