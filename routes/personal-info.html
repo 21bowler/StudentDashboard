@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Personal Information</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-[#ddd]">
+      <!-- header Content -->
+      <header class="border-b border-gray-400">
+        <div
+          class="container mx-auto px-4 py-4 flex items-center justify-between"
+        >
+          <div>
+            <h1 class="text-2xl font-bold">Student Portal</h1>
+          </div>
+
+          <!-- Navlinks below -->
+          <nav class="hidden md:flex gap-1">
+            <a
+              href="/"
+              class="px-3 py-2 text-sm font-medium hover:underline transition-underline"
+              >Home</a
+            >
+            <a
+              href="./personal-info.html"
+              class="px-3 py-2 text-sm font-medium hover:underline transition-underline"
+              >Info</a
+            >
+
+            <a
+              href="./fees.html"
+              class="px-3 py-2 text-sm font-medium hover:underline transition-underline"
+              >Fees</a
+            >
+            <a
+              href="./timetable.html"
+              class="px-3 py-2 text-sm font-medium hover:underline transition-underline"
+              >Timetable</a
+            >
+            <a
+              href="./course-registration.html"
+              class="px-3 py-2 text-sm font-medium hover:underline transition-underline"
+              >Course Registration</a
+            >
+            <a
+              href="./results.html"
+              class="px-3 py-2 text-sm font-medium hover:underline transition-underline"
+              >Results</a
+            >
+            <a
+              href="./my-requests.html"
+              class="px-3 py-2 text-sm font-medium hover:underline transition-underline"
+              >My Requests</a
+            >
+          </nav>
+          <!-- Menu toggle button -->
+          <button
+            type="button"
+            class="md:hidden p-2 cursor-pointer hover:border hover:rounded-sm transition-border ease-linear duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu-icon lucide-menu"
+            >
+              <path d="M4 5h16" />
+              <path d="M4 12h16" />
+              <path d="M4 19h16" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- main content -->
+      <main class="container mx-auto px-4 py-2">
+        <a
+          href="/"
+          class="inline-flex items-center mb-6 gap-2 hover:text-blue-500 transition-all"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-left-icon w-4 h-4 lucide-arrow-left"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" /></svg
+          >Back</a
+        >
+        <!-- actual user details -->
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-bold mb-8">Personal Information</h2>
+
+          <div
+            class="bg-[#fff]/60 border border-gray-300 rounded-lg p-8 space-y-6"
+          >
+            <!-- Student ID -->
+            <div>
+              <label class="text-sm font-semibold uppercase">Student ID</label>
+              <p class="text-lg mt-1">BSCCS/2025/12344</p>
+            </div>
+
+            <!-- Name -->
+            <div>
+              <label class="text-sm font-semibold uppercase">Full Name</label>
+              <p class="text-lg mt-1">John Doe</p>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="text-sm font-semibold uppercase"
+                >Email Address</label
+              >
+              <p class="text-lg mt-1">johndoeBSCCS20251234@mylife.mk.ac.ke</p>
+            </div>
+
+            <!-- Program -->
+            <div>
+              <label class="text-sm font-semibold uppercase">Program</label>
+              <p className="text-lg mt-1">
+                Bachelor of Science in Computer Science
+              </p>
+            </div>
+
+            <!-- Year -->
+            <div>
+              <label class="text-sm font-semibold uppercase"
+                >Current Year</label
+              >
+              <p class="text-lg mt-1">Year 2</p>
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label class="text-sm font-semibold uppercase"
+                >Phone Number</label
+              >
+              <p class="text-lg mt-1">+254 712 345 678</p>
+            </div>
+
+            <!-- Edit Button  -->
+            <button
+              type="button"
+              class="mt-8 cursor-pointer px-6 py-2 bg-blue-600/90 text-white rounded-md font-medium hover:bg-blue-600 transition-colors"
+            >
+              Edit Information
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
